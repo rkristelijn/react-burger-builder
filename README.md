@@ -59,4 +59,6 @@ https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans:400,700
 
 `<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">`
 
+# Design
+![yUML Class](./doc/components.svg)
 
