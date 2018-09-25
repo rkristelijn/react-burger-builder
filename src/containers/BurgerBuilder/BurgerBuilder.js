@@ -48,7 +48,7 @@ class BurgerBuilder extends Component {
         //
         const disabledInfo = Object.keys(this.state.ingredients).map((key, val) => {
             //console.log('map', [...Array([key], (!this.state.ingredients) )] );
-            return ([...Array([key], (this.state.ingredients[key ] <= 0) )]);
+            return ([...Array([key], (this.state.ingredients[key] <= 0))]);
         }).reduce((acc, cur, i) => {
             //console.log('reduce', acc, cur, i);
             acc[cur[0]] = cur[1];
@@ -60,7 +60,11 @@ class BurgerBuilder extends Component {
         return (
             <Aux>
                 <Burger ingredients={this.state.ingredients} />
-                <BuildControls add={this.addIngredientsHandler} del={this.removeIngredientsHandler} disabledLessButton={disabledInfo} />
+                <BuildControls
+                    add={this.addIngredientsHandler}
+                    del={this.removeIngredientsHandler}
+                    disabledLessButton={disabledInfo}
+                    price={this.state.totalPrice} />
             </Aux>
         );
     }
