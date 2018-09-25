@@ -4,7 +4,7 @@ import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 const burger = (props) => {
     // Object.keys() returns an array with the keys of the object
-    // console.log(props); // Object ingredients: { bacon: 1, cheese: 2, meat: 2, salad: 1 }
+    console.log('Burger.js', props); // Object ingredients: { bacon: 1, cheese: 2, meat: 2, salad: 1 }
     let transformedIngredients = Object.keys(props.ingredients)
         .map(igKey => { // map executes a function for every element in an array
             //Array returns an array with an amount of items provided as argument
