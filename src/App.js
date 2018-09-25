@@ -3,7 +3,9 @@ import Layout from './components/Layout/Layout';
 import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
 
 class App extends Component {
-  render() {
+  render = () => {
+  //render() {
+    console.log('App.js', 'render');
     return (
       <div>
         <Layout>

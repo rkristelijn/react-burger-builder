@@ -4,6 +4,7 @@ import classes from './BurgerIngredient.css';
 
 class BurgerIngredient extends Component {
     render = () => {
+        console.log('BurgerIngredient.js', 'render');
         let ingredient = null;
 
         switch (this.props.type) {

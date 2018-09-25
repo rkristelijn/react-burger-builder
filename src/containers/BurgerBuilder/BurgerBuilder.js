@@ -45,6 +45,7 @@ class BurgerBuilder extends Component {
     }
 
     render = () => {
+        console.log('BurgerBuilder.js','render');
         return (
             <Aux>
                 <Burger ingredients={this.state.ingredients} />
