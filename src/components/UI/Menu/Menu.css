@@ -1,0 +1,21 @@
+.Menu {
+    background-color: white;
+    padding: 8px;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height:80%;
+}
+
+.Menu div {
+    width: 35px;
+    height: 5px;
+    background-color: #703B09;
+    margin: 4px 0;
+}
+
+@media (min-width: 500px) {
+    .MobileOnly {
+        display: none;
+    }
+}
