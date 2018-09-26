@@ -52,6 +52,10 @@ class BurgerBuilder extends Component {
         });
     }
 
+    purchaseHandler = () => {
+        this.setState({ purchasing: true });
+    }
+
     render = () => {
         //
         const disabledInfo = Object.keys(this.state.ingredients).map(key => {
@@ -67,11 +71,12 @@ class BurgerBuilder extends Component {
         console.log('BurgerBuilder.js', 'render');
         return (
             <Aux>
-                <Modal>
-                    <OrderSummary ingredients={this.state.ingredients}/>
+                <Modal show={this.state.purchasing}>
+                    <OrderSummary ingredients={this.state.ingredients} />
                 </Modal>
                 <Burger ingredients={this.state.ingredients} />
                 <BuildControls
+                    ordered={this.purchaseHandler}
                     add={this.addIngredientsHandler}
                     del={this.removeIngredientsHandler}
                     disabledLessButton={disabledInfo}
