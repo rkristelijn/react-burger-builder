@@ -65,28 +65,28 @@ class BurgerBuilder extends Component {
     }
 
     render = () => {
-        //
         const disabledInfo = Object.keys(this.state.ingredients).map(key => {
             //console.log('map', [...Array([key], (!this.state.ingredients) )] );
-            return ([...Array([key], (this.state.ingredients[key] <= 0))]);
+            //return ([...Array([key], (this.state.ingredients[key] <= 0))]); //  Line 71:  The array literal notation [] is preferrable  no-array-constructor
+            return ([...[[key], (this.state.ingredients[key] <= 0)]]);
         }).reduce((acc, cur, i) => {
             //console.log('reduce', acc, cur, i);
             acc[cur[0]] = cur[1];
             return acc;
         }, {});
-        console.log('disabledInfo', disabledInfo);
+        //console.log('disabledInfo', disabledInfo);
 
-        console.log('BurgerBuilder.js', 'render');
+        //console.log('BurgerBuilder.js', 'render');
         return (
             <Aux>
                 <Modal show={
                     this.state.purchasing}
                     modalClosed={this.purchaseCancelHandler}>
-                    <OrderSummary 
-                    price={this.state.totalPrice.toFixed(2)}
-                    ingredients={this.state.ingredients} 
-                    cancel={this.purchaseCancelHandler}
-                    continue={this.purchaseContinueHandler}
+                    <OrderSummary
+                        price={this.state.totalPrice.toFixed(2)}
+                        ingredients={this.state.ingredients}
+                        cancel={this.purchaseCancelHandler}
+                        continue={this.purchaseContinueHandler}
                     />
                 </Modal>
                 <Burger ingredients={this.state.ingredients} />

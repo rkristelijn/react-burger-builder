@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './BuildControl.css';
 
 const buildControl = (props) => {
-    console.log('buildControl', props);
+    //console.log('buildControl', props);
     return (
     <div className={classes.BuildControl}>
         <div className={classes.label}>{props.label}</div>
