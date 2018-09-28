@@ -1,7 +1,7 @@
 //import React, { Component } from 'react';
 import React from 'react';
 
-import Aux from '../../../hoc/Aux';
+import Aux from '../../../hoc/Aux/Aux';
 import Button from '../../UI/Button/Button'
 
 // the component version, but we don't need it like this

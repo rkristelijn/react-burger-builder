@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classes from './Modal.css';
-import Aux from '../../../hoc/Aux';
+import Aux from '../../../hoc/Aux/Aux';
 import Backdrop from '../Backdrop/Backdrop';
 
 class Modal extends Component {
@@ -9,9 +9,9 @@ class Modal extends Component {
         // console.log('Modal', 'shouldComponentUpdate', nextProps, nextState);
         return nextProps.show !== this.props.show;
     }
-    UNSAFE_componentWillUpdate = () => {
-        //console.log('Modal', 'UNSAFE_componentWillUpdate');
-    }
+    // UNSAFE_componentWillUpdate = () => {
+    //     //console.log('Modal', 'UNSAFE_componentWillUpdate');
+    // }
     render = () => {
         //console.log('Modal', 'render');
         return (
